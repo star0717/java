@@ -7,7 +7,7 @@ public class Java20240304 {
         }
         System.out.println();
 
-        for (int i = 0; i < 3; i++){ // for 문의 반복ㄷ
+        for (int i = 0; i < 3; i++){ // for 문의 반복 횟수를 지정하는 변수를 초기에서 선언
             System.out.println(i + "");
         }
         System.out.println();
@@ -25,6 +25,16 @@ public class Java20240304 {
         System.out.println();
         for (int i = 0, j = 0; i < 10; i++, j++){
             System.out.println(i + j + "");
+        }
+
+        int i = 0;
+        for(; ; ){
+            if (i < 5){
+                System.out.println(i + " ");
+                i++;
+            }else {
+                break;
+            }
         }
     }
 }
