@@ -86,7 +86,7 @@ public class Java20240304 {
             for (int j = 0; j < 5; j++){
                 System.out.println("o = " + o + ", j + " + j + " ");
             }
-        }
+        } // 외부 for문 하나 당 내부 for문 실행
 
     }
 }
