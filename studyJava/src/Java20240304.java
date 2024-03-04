@@ -87,8 +87,17 @@ public class Java20240304 {
                 System.out.println("o = " + o + ", j + " + j + " ");
             }
         } // 외부 for문 하나 당 내부 for문 실행
+        System.out.println();
+        // ---------------------------------------------------------------------------------------------
         
-        // 배열
+        // 배열 (array)
+        String[] colorList = {"red", "blue", "yellow"}; // 배열의 순서 = index
+        System.out.println(colorList[0]); // 0부터 시작함
 
+        for (int f = 0; f < 3; f ++){
+            if (colorList[f] == "blue"){
+                System.out.println("Hi I am blue :)!");
+            }
+        }
     }
 }
