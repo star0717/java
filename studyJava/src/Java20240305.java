@@ -55,6 +55,8 @@ public class Java20240305 {
         System.out.println(Arrays.toString(intList2));
         System.out.println(Arrays.toString(intList1));
 
+        System.out.println();
+
         // 배열과 for문의 사용
         // 조건식에 배열의 갯수(length)를 사용함
         for (int i=0; i<intList2.length; i++) {
