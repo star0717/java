@@ -91,6 +91,7 @@ public class Java20240304 {
         // ---------------------------------------------------------------------------------------------
         
         // 배열 (array)
+
         String[] colorList = {"red", "blue", "yellow"}; // 배열의 순서 = index
         System.out.println(colorList[0]); // 0부터 시작함
 
@@ -99,5 +100,48 @@ public class Java20240304 {
                 System.out.println("Hi I am blue :)!");
             }
         }
+        // 기본 선언법
+        int[] intArray1 = {1,2,3,4,5};
+        System.out.println(intArray1[0]);
+
+        int[] intArray2 = new int[5];
+
+        intArray2[0] = 1;
+        intArray2[1] = 2;
+        intArray2[2] = 3;
+        intArray2[3] = 4;
+        intArray2[4] = 5;
+        System.out.println(intArray2[4]);
+
+        int[] intArray3 = new int[5];
+        // int[] intArray3 = 가변의 길이를 가진 배열을 저장함.
+        for (int k = 0; k < intArray3.length; k ++ ){
+            intArray3[k] = k+1;
+            System.out.print(intArray3[k] + " ");
+        }
+        System.out.println();
+
+        int[] intArray4 = new int[]{1,2,3,4,5};
+        System.out.println(intArray4[0]);
+
+        System.out.println();
+
+        // 배열의 복사 (= 참조복사)
+        String[] str1 = {"black","red","blue"};
+        String[] str2 = str1;
+        System.out.println("1 " + str2[0]);
+        str2[0] = "white";
+        System.out.println("2 " + str2[0]);
+        System.out.println("3 " + str1[0]);
+
+        // 기본 자료형의 복사 (= 값 복사)
+        int y = 3;
+        int x = y;
+        System.out.println("1 "+ x);
+        y = 6;
+        System.out.println("2 "+ x);
+        System.out.println("3 "+ y);
+
+
     }
 }
