@@ -113,40 +113,63 @@ public class Java20240306 {
         System.out.println(count);
 
 //         4. 사용자로부터 0~6까지 숫자를 입력받아 아래 배열에 해당하는 요일을 출력하시오.
-//        char[] week = {'월','화','수','목','금','토','일'};
+//        char[] week = {'월','화','수','목','금','토','일'}; // 0,1,2,3,4,5,6
 //        Scanner scan = new Scanner(System.in);
 //        System.out.print("0~6까지 숫자를 입력해주세요 : ");
 //        int num = scan.nextInt();
 //
 //        if (num >= 0 && num <= 6){
 //           System.out.println(week[num]);
+//           break;
 //        } else {
 //            System.out.println("잘못 입력 하셨습니다.");
 //        }
 
         // 5. 사용자로부터 이름을 입력받아 아래 회원배열에 있는 이름이면
         // 00님 환영합니다를 출력 / 아닐 시 회원가입 문구 출력
-
         String[] members = {"Steve","Tom","Michael","Laura","Jessica","Annie"};
         Scanner scan = new Scanner(System.in);
         System.out.print("이름을 입력해주세요 : ");
         String name = scan.nextLine();
 
-        boolean isMember = false; // 참, 거짓을 분별해주는 역할
+//        boolean isMember = false; // 참, 거짓을 분별해주는 역할
+//
+//        for (int i = 0; i < members.length; i++){
+//            if (members[i].equalsIgnoreCase(name)){
+//                isMember = true;
+//                System.out.println(members[i] + "님 환영합니다!");
+//            }
+//        } // => 인덱스값(6)보다 i(0)가 작을 경우 1씩 증가시키고
+//        // 만약 members , name이 같으면 isMember는 true로 변환한다
+//        // 6과 같아지기 전까지 반복한다.
+//        // i는 members의 인덱스 값 ex) 1 = Tom
+//        if(isMember == false){ // 만약 isMember 가 false 상태라면 에러메세지
+//            System.out.println("회원가입을 진행해주세요!");
+//        }
 
+        // 선생님 예제코드
+        // #1
+        boolean found = false;
         for (int i = 0; i < members.length; i++){
             if (members[i].equalsIgnoreCase(name)){
-                isMember = true;
-                System.out.println(members[i] + "님 환영합니다!");
+                System.out.println(members[i] + "님 환영합니다");
+                found = true;
+                break;
             }
-        } // => 인덱스값(6)보다 i(0)가 작을 경우 1씩 증가시키고
-        // 만약 members , name이 같으면 isMember는 true로 변환한다
-        // 6과 같아지기 전까지 반복한다.
-        // i는 members의 인덱스 값 ex) 1 = Tom
-        if(isMember == false){ // 만약 isMember 가 false 상태라면 에러메세지
-            System.out.println("회원가입을 진행해주세요!");
         }
-
-
+        if (!found) {
+            System.out.println("회원가입을 진행해주세요");
+        }
+        // #2
+        for (int i = 0; i < members.length; i++) {
+            if (members[i].equalsIgnoreCase(name)) {
+                System.out.println(members[i] + "님 환영합니다");
+                break;
+            }
+            if (i == members.length - 1){
+                System.out.println("회원가입을 진행해주세요");
+            }
+        }
+        }
     }
-}
+
