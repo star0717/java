@@ -132,20 +132,20 @@ public class Java20240306 {
         System.out.print("이름을 입력해주세요 : ");
         String name = scan.nextLine();
 
-//        boolean isMember = false; // 참, 거짓을 분별해주는 역할
-//
-//        for (int i = 0; i < members.length; i++){
-//            if (members[i].equalsIgnoreCase(name)){
-//                isMember = true;
-//                System.out.println(members[i] + "님 환영합니다!");
-//            }
-//        } // => 인덱스값(6)보다 i(0)가 작을 경우 1씩 증가시키고
-//        // 만약 members , name이 같으면 isMember는 true로 변환한다
-//        // 6과 같아지기 전까지 반복한다.
-//        // i는 members의 인덱스 값 ex) 1 = Tom
-//        if(isMember == false){ // 만약 isMember 가 false 상태라면 에러메세지
-//            System.out.println("회원가입을 진행해주세요!");
-//        }
+        boolean isMember = false; // 참, 거짓을 분별해주는 역할
+
+        for (int i = 0; i < members.length; i++){
+            if (members[i].equalsIgnoreCase(name)){
+                isMember = true;
+                System.out.println(members[i] + "님 환영합니다!");
+            }
+        } // => 인덱스값(6)보다 i(0)가 작을 경우 1씩 증가시키고
+        // 만약 members , name이 같으면 isMember는 true로 변환한다
+        // 6과 같아지기 전까지 반복한다.
+        // i는 members의 인덱스 값 ex) 1 = Tom
+        if(isMember == false){ // 만약 isMember 가 false 상태라면 에러메세지
+            System.out.println("회원가입을 진행해주세요!");
+        }
 
         // 선생님 예제코드
         // #1
@@ -170,6 +170,19 @@ public class Java20240306 {
                 System.out.println("회원가입을 진행해주세요");
             }
         }
+        // #3
+        int k = 0;
+        for (; k < members.length; k++) {
+            if (members[k].equalsIgnoreCase(name)) {
+                System.out.println(members[k] + "님 환영합니다");
+                break;
+            }
         }
+        if (k == members.length ){
+            System.out.println("회원가입을 진행해주세요");
+        }
+
+
     }
+}
 
