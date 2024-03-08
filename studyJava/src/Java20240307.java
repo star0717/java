@@ -117,6 +117,13 @@ public class Java20240307 {
         Arrays.sort(lottoList); // 오름차 순으로 정렬
         System.out.print(Arrays.toString(lottoList)); // 출력
 
+        // #4 (HashSet)
+        HashSet<Integer> intList4 = new HashSet<>();
+        while(intList4.size() < 6) {
+            intList4.add(rd.nextInt(45) + 1);
+        }
+        System.out.println(intList4.toString());
+
 
         // Class
 
@@ -128,6 +135,6 @@ public class Java20240307 {
 
         Students byeol = new Students(); // 생성자
         byeol.name = "byeol";
-
+        byeol.grade = 5;
     };
 }

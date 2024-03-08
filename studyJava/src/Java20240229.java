@@ -41,7 +41,7 @@ public class Java20240229 {
         // 중복 해당되도록 조건을 만들어선 안된다.
         int score = 91;
 
-        if (score >= 91) {
+        if (score >= 90) {
             System.out.println("A");
         } else if (score >= 80 && score < 90) {
             System.out.println("B");
@@ -102,6 +102,7 @@ public class Java20240229 {
         }
 
         //-------------------------------------------------------------------------
+
 
     }
 
