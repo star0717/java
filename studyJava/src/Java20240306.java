@@ -84,12 +84,12 @@ public class Java20240306 {
         //------------------------------------------------------------------------------
 
         // 예제 문제
-        // 길이가 10인 배열에 1부터 10까지 값을 입력하시오.
+        // 길이가 10인 배열에 1부터 10까지 값을 출력하시오.
         int[] testArray = new int[10]; // testArray의 길이는 10이고
         for (int i = 0; i < 10; i++){ // i는 0인데 i가 10보다 커지기 전까지 i++를 반복해줘
             testArray[i] = i + 1; // testArray의 시작점은 0 + 1이야 => i가 0이기 때문
         }
-        System.out.println(Arrays.toString(testArray));
+        System.out.println(testArray);
 
         // 위의 출력값을 거꾸로 출력시키시오.
         int[] testArray2 = new int[10];
@@ -181,6 +181,9 @@ public class Java20240306 {
         if (k == members.length ){
             System.out.println("회원가입을 진행해주세요");
         }
+
+        int a;
+
 
 
     }

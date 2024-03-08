@@ -1,3 +1,6 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
 public class Preparation {
     public static void main(String[] args) {
 
@@ -66,7 +69,44 @@ public class Preparation {
             System.out.println("error!!");
         }
 
+        //---------------------------------------------------------
 
+        // 6. 아래 배열에서 입력받은 값보다 큰 수만 출력하시오
+
+
+        // 사용자로부터 0~6까지 숫자를 입력받아 아래 배열에 해당하는 요일을 출력하시오.
+
+        for (int intNum = 0; intNum < 10; intNum++){
+            System.out.print(intNum);
+        }
+
+        System.out.println();
+
+//        int[] array = new int[]{3,4,5,6,7};
+//        for (int j = 0; j < array.length; j++){
+//            System.out.println(array[j]);
+//        }
+
+//        System.out.println(array.length);
+
+        int[] testArray = new int[10]; // testArray의 길이는 10이고
+
+        int q = 100;
+        for (int i = 0; i < testArray.length; i++){ // i는 0인데 i가 10보다 커지기 전까지 i++를 반복해줘
+            testArray[i] = i+1; // testArray의 시작점은 0 + 1이야 => i가 0이기 때문
+        } // 1~10
+
+        System.out.println(Arrays.toString(testArray));
+        System.out.println(Arrays.toString(testArray));
+
+
+        // i열 1~5 , j열 1~5 = i+j
+
+        for (int i = 1; i <= 5; i++){
+            for (int j = 1; j <= 5; j++){
+                System.out.print("[" + i + "+" + j + "]");
+            }
+        }
 
     }
 

@@ -1,7 +1,7 @@
 public class Java20240304 {
     public static void main(String[] args) {
 
-        //for 문 기본 문법 구조
+/*        //for 문 기본 문법 구조
         int a; // for 문의 반복 횟수를 지정하는 변수를 외부에서 선언
         for (a = 0; a < 3; a++){
             System.out.println(a);
@@ -54,13 +54,13 @@ public class Java20240304 {
         }
 
         //의도적인 무한루프에서 while문은 자주 쓰임
-       /* while (true){
+       *//* while (true){
             // 무한루프
             // 유저가 버튼 클릭할 때 까지 대기
             // if (esc버튼 클릭){
                 break;
             }
-        } */
+        } *//*
         System.out.println();
 
         // do ~ while 문
@@ -70,10 +70,10 @@ public class Java20240304 {
             System.out.println(cnt);
             cnt ++;
         } while (cnt < 5); // ~하는 동안
-        /*
+        *//*
             아래 while문과 비교하면 반복문의 조건이 false가 되는 경우,
             do ~ while문은 실행코드가 1회 실행되는 반면 while문은 실행되지 않음
-        * */
+        * *//*
         int cnt2 = 5;
         while (cnt2 < 5){
             System.out.println(cnt2);
@@ -140,7 +140,7 @@ public class Java20240304 {
         System.out.println("1 "+ x);
         y = 6;
         System.out.println("2 "+ x);
-        System.out.println("3 "+ y);
+        System.out.println("3 "+ y);*/
 
 
     }

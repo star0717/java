@@ -1,7 +1,4 @@
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Java20240307 {
     public static void main (String[] args){
@@ -50,8 +47,87 @@ public class Java20240307 {
         int[] numberList = {12,34,56,32,84,99,73,69};
 
         int sum = 0;
-        for (int sum){
 
+        for (int i = 0; i < numberList.length; i++){
+            sum = sum + numberList[i];
+        } // numberList[i]는 계속 증가됨 0 + 12 => 12 + 34 => 46 + 56...+69까지 도달하면 반복문 멈춤
+
+        int average = sum / numberList.length; // sum은 0에서 위의 총 합산인 459로 나누어져있는 상태
+
+        System.out.println(sum + " " + average);
+
+        // 8. 사용자로부터 문자열을 입력 받아서 입력 받은 문자열을 거꾸로 출력
+        Scanner sc1 = new Scanner(System.in);
+        System.out.print("문자열을 입력해주세요 : ");
+        String inputStr = sc1.nextLine();
+
+        char[] charList1 = inputStr.toCharArray();
+        char[] charList2 = new char [charList1.length];
+        int index = charList2.length - 1;
+        for (int i=0; i< charList1.length; i++) {
+            charList2[index] = charList1[i];
+            index = index - 1;
         }
+        for (int i=0; i< charList2.length; i++) {
+            System.out.print(charList2[i]);
+        }
+        System.out.println();
+
+
+        // 난수생성법 , Random 숫자 만드는 법
+
+        Random rd = new Random();
+        int randNum = rd.nextInt();
+        System.out.println(randNum);
+        // intiger의 전체 범위에서 출력 (음수,양수 둘 다 가능)
+
+        Random rd2 = new Random();
+        int randNum2 = rd2.nextInt(10); // 0부터 압력한 (정수값 -1) 범위에서 랜덤
+        // 1부터 출력하려면 rd.nextInt(10)+1;
+        System.out.println(randNum2);
+
+        // 9. 1~45까지의 랜덤한 정수를 length가 6인 배열에 넣으시오
+        // 단 중복 불가
+
+        Random randClass = new Random();
+        int[] lottoList = new int[6];
+
+        // #1
+//         for (int i = 0; i < lottoList.length; i++){
+//             int temp = randClass.nextInt(45)+1; //temp
+//             for (int j=0; j<i; j++){
+//                 if(lottoList[j] == temp){
+//                     temp = randClass.nextInt(45)+1;
+//                     j = -1;
+//                 }
+//             }
+//             lottoList[i] = temp;
+//         }
+//         System.out.print(Arrays.toString(lottoList));
+
+        // #2
+        for (int i = 0; i < lottoList.length; i++){
+            lottoList[i] = randClass.nextInt(45)+1; // i는 1부터 45의 랜덤 수
+            for (int j=0; j<i; j++){ // j는 0 j가 i값보다 작을 시 1씩 증가 => 총 여섯번 작동
+                if(lottoList[j] == lottoList[i]){ // j와 i의 값이 동일할 시
+                    i = i - 1; // i는 다시 1 감소 => 한번 더 실행
+                }
+            }
+        }
+        Arrays.sort(lottoList); // 오름차 순으로 정렬
+        System.out.print(Arrays.toString(lottoList)); // 출력
+
+
+        // Class
+
+        class Students{
+          String name = "tom";
+          String gender;
+          int grade;
+        }
+
+        Students byeol = new Students(); // 생성자
+        byeol.name = "byeol";
+
     };
 }
