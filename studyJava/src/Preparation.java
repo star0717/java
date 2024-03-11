@@ -109,12 +109,7 @@ public class Preparation {
 //        }
 
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
 
-        int[] numArray = new int[10];
-//        int num = scan.nextInt();
-
-        
 
     }
 
