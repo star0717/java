@@ -1,5 +1,4 @@
 
-import java.util.Arrays;
 import java.util.Scanner;
 public class Preparation {
     public static void main(String[] args) {
@@ -110,9 +109,48 @@ public class Preparation {
 
         Scanner scan = new Scanner(System.in);
 
+//        class A {
+//            boolean a;
+//            int b;
+//            double c;
+//            String d;
+//
+//            void abc() {
+//                System.out.println(b + c);
+//                System.out.println(c + d);
+//                System.out.println(d + a);
+//            }
+//        }
+
+//        A a = new A();
+//        System.out.println(a.a);
+//        System.out.println(a.b);
+//        System.out.println(a.c);
+//        System.out.println(a.d);
+//        System.out.println();
+//        a.abc();
+
+        class A{
+            int arraySum(int[] array){
+                int sum = 0;
+                for (int i = 0; i < array.length; i++){
+                    sum += array[i];
+                }
+                return sum;
+            }
+        }
+
+//        A a = new A();
+//
+//        int [] data1 = new int[] {1,2,3};
+//        int [] data2 = {1,2,3};
+//        System.out.println(a.arraySum(data1));
+//        System.out.println(a.arraySum(data2));
+//        System.out.println(a.arraySum(new int[] {1,2,3}));
+////        System.out.println(a.arraySum({1,2,3})); => new int를 사용해야함
+
+
+
 
     }
-
-
-
 }
