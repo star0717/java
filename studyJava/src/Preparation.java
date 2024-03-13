@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 public class Preparation {
     public static void main(String[] args) {
@@ -149,8 +150,49 @@ public class Preparation {
 //        System.out.println(a.arraySum(new int[] {1,2,3}));
 ////        System.out.println(a.arraySum({1,2,3})); => new int를 사용해야함
 
+        int[] intArray1 = {1,2,3,4,5};
+        int[] intArray2 = new int[intArray1.length];
+        System.out.println("start");
 
 
+        for (int i = 0; i < intArray1.length; i++){
+            intArray2[i] = intArray1[i];
+        }
+
+        System.out.println(Arrays.toString(intArray1));
+        System.out.println(Arrays.toString(intArray2));
+
+
+        int [] arr = new int [] {1, 2, 8, 3, 2, 2, 2, 5, 1};
+        // arr 배열 안에는 1, 2, 8, 3, 2, 2, 2, 5, 1가 속해있다.
+        int [] fr = new int [arr.length];
+        // fr 배열의 길이는 arr 배열의 길이와 동일함
+        int visited = -1;
+        // visited 는 -1
+        for(int i = 0; i < arr.length; i++){
+            // i는 0이고 i가 arr의 length값인 9만큼의 길이를 가지고 있음
+            int count = 1;
+            // count 는 1
+            for(int j = i+1; j < arr.length; j++){
+                // j는 i+1이고 j가 arr의 length값 (9) 보다 작으면 j는 1씩 증가
+                if(arr[i] == arr[j]){
+                    // 만약 arr[i]와 arr[j]의 값이 같을 경우
+                    count++;
+                    // count(초기값1)을 1씩 증가
+                    fr[j] = visited;
+                    // fr[j]는 -1
+                }
+            }
+            if(fr[i] != visited)
+                // fr[i]가 visited값하고 다르다면
+                fr[i] = count;
+            //fr[i]은 count값
+        }
+
+        for(int i = 0; i < fr.length; i++){
+            if(fr[i] != visited)
+                System.out.println("    " + arr[i] + "    |    " + fr[i]);
+        }
 
     }
 }
