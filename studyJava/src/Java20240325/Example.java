@@ -2,6 +2,8 @@ package Java20240325;
 
 public class Example {
     public static void main(String[] args) {
+        // 20240325 개중요합니다 많이 쓰는 양식이니 Students.java와 함께 뚫어지게 보십쇼 윤별
+
         // 첫번째 미션
         // 아래 코드가 실행될 수 있도록 Students 클래스를 완성하시오
         // 힌트 : 세터메서드를 만들어야함. toString()는 오버라이딩 필요.
@@ -40,6 +42,5 @@ public class Example {
             students[i].setStudentId(studentsIds[i]);
             System.out.println(students[i].toString());
         }
-
     }
 }
