@@ -10,7 +10,7 @@ public class Example {
         students0.setDepartment("Physics");
         students0.setStudentId(10001);
         System.out.println(students0.toString()); // Steve, Physics, 10001
-
+        System.out.println();
         // 두번째 미션
         // 아래 메서드를 완성하시오
         // 주어진 배열을 이용하여 Students타입의 배열을 만들고 for문으로 출력해야함
@@ -21,6 +21,25 @@ public class Example {
         String[] names = {"Steve", "tom", "Laura", "Susie"};
         String[] departments = {"Physics", "Computer", "English", "Law"};
         int[] studentsIds = {10001, 10002, 10003, 10004};
+        // 데이터베이스의 raw data(가공하지 않은 순수 데이터)를
+        // Students 객체 형태로 만들고 애를 배열에 담는다.
+
+        // 1. 배열 만들기
+        Students[] students = new Students[names.length];
+        // 2. for문 만들기
+        for (int i = 0; i < names.length; i++){
+            students[i] = new Students(names[i],departments[i],studentsIds[i]);
+            System.out.println(students[i].toString());
+        }
+        System.out.println();
+        // 방법 2 (가짓수가 많이 없을 경우는 위 방법 1을 권장)
+        for (int i = 0; i < names.length; i++){
+            students[i] = new Students();
+            students[i].setName(names[i]);
+            students[i].setDepartment(departments[i]);
+            students[i].setStudentId(studentsIds[i]);
+            System.out.println(students[i].toString());
+        }
 
     }
 }
