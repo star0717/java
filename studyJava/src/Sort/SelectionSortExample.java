@@ -1,4 +1,4 @@
-package Java20240325;
+package Sort;
 
 public class SelectionSortExample {
     public static void selectionSort(int[] arr){
