@@ -35,7 +35,7 @@ public class LambdaExpression {
         a.method1();
 
         // pattern 02
-        B b = (int x) -> System.out.println("[pattern02]매개변수가 있고 입력은 하되 리턴은 안함" + x);
+        B b = (int x) -> System.out.println("pattern02" + x); // 매개변수가 있고 입력은 하되 리턴은 안함
         B b1 = (x) -> System.out.println("pattern02 " + x);
         B b2 = x -> System.out.println("pattern02 " + x); // 매개변수가 하나인 경우만 소괄호 삭제
         b2.method2(5);
@@ -48,5 +48,7 @@ public class LambdaExpression {
         D d1 = (int x, double y) -> x + y;
         D d2 = (x, y) -> x + y;
         System.out.println(d2.method4(4,4.5));
+
+
     }
 }

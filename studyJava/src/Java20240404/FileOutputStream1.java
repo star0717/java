@@ -36,12 +36,12 @@ public class FileOutputStream1 {
         OutputStream os2 = new FileOutputStream(outFile, true);
 
         // getByte()는 문자열을 바이트 배열로 변경시켜주는 메서드
-        byte[] byteArray = "Spring and Database".getBytes();
+        byte[] byteArray = "Spring and Database\r\n".getBytes();
 
         // write는 매개변수에 바이트배열 형태로 넣어주면 배열에 담긴 데이터를 모두 쓴다.
         os2.write(byteArray);
-        os2.write('\r');
-        os2.write('\n');
+        //os2.write('\r');
+        //os2.write('\n');
         os.flush();
         os.close();
 
