@@ -70,3 +70,30 @@ where 성별 = '남';
 select 고객회사명, 마일리지 from 고객
 where 마일리지 >= 1000
 order by 마일리지 desc;
+
+select 주문번호, 주문수량 from 주문세부
+where 제품번호 = 77;
+
+select 주문번호, 주문일 from 주문
+where 주문일 < '2021-01-01';
+
+select 이름, 성별, 직위 from 사원
+where 성별 = '여'
+and 직위 = '사원';
+
+select 제품명 from 제품
+where 단가 >= 8000;
+
+select 주문번호, 주문수량 from 주문세부
+where 주문수량 >= 5
+order by 주문수량 desc;
+
+select 이름, 생일 from 사원
+where 생일 > '1990-01-01';
+
+select 이름, 입사일 from 사원
+where 직위 = '사원'
+order by 입사일 desc;
+
+select 고객번호, 고객회사명 from 고객
+where 도시 = '대전광역시';
