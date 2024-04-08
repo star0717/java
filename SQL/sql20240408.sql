@@ -84,6 +84,17 @@ and 직위 = '사원';
 select 제품명 from 제품
 where 단가 >= 8000;
 
+select 제품명,단가 from 제품
+where 단가 between 1000 and 2000;
+
+select 제품명,단가 from 제품
+where 단가 in (1000,2000,3000);
+
+select 제품명,단가 from 제품
+where 단가 = 1000
+or 단가 = 2000
+or 단가 = 3000;
+
 select 주문번호, 주문수량 from 주문세부
 where 주문수량 >= 5
 order by 주문수량 desc;
