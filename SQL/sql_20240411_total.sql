@@ -3,8 +3,7 @@ select count(*),
 	count(고객번호),
 	count(도시),
 	count(지역)
-	from 고객;  
-	
+from 고객;
 select * from 고객;
 
 -- sum 합계
@@ -23,7 +22,6 @@ select 도시,
 	avg(마일리지) as 평균마일리지
 from 고객
 group by 도시;
-
 
 select 담당자직위,
 	도시,
@@ -44,9 +42,9 @@ having count(*) >= 4;
 select 도시,
 	sum(마일리지)
 from 고객
-where 고객번호 like 'T%' -- where는 select에 지정된 컬럼이외도 사용가능
+where 고객번호 like 'T%'-- where는 select에 지정된 컬럼이외도 사용가능
 group by 도시
-having sum(마일리지) >= 1000; -- having은 select에 지정된 컬럼만 사용
+having sum(마일리지) >= 1000;-- having은 select에 지정된 컬럼만 사용 
 
 -- with rollup 그룹별 소계와 전체 총계를 표시
 select 도시,
@@ -56,16 +54,14 @@ from 고객
 group by 도시
 with rollup; -- 고객수 총계
 
-
--- group by 멀티
 select 담당자직위,
 	도시,
 	count(*) as 고객수
 from 고객
 group by 담당자직위, 도시
 with rollup; -- 담당자직위별 소계 + 총계
-	
--- group_concat 컴럼내의 값을 결합해서 표시
+
+-- group_concat 컬럼내의 값을 결합해서 표시
 select 도시,
 	group_concat(고객회사명) as 고객회사명목록
 from 고객
