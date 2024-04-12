@@ -1,6 +1,6 @@
 -- 산술연산자
 select 23 + 5, 23 - 5, 23 * 5, 23 / 5, 23 div 5,
-23 % 5, 23 mod 5;  -- div는 정수형나누기
+23 % 5, 30 mod 5;  -- div는 정수형나누기, mod는 나머지
 
 -- 비교연산자
 select 23 >= 5, 23 <= 5, 23 > 23, 23 < 23, 23 = 23,
@@ -33,6 +33,7 @@ where 지역 = '';
 select 고객번호, 담당자명, 담당자직위
 from 고객
 where 담당자직위 = '영업 과장' or 담당자직위 = '마케팅 과장';
+
 select 고객번호, 담당자명, 담당자직위
 from 고객
 where 담당자직위 in ('영업 과장', '마케팅 과장');
@@ -83,6 +84,7 @@ select * from 고객
 where 도시 not like '%광역시' and 도시 not like '%특별시'
 order by 마일리지 desc
 limit 3;
+
 select * from 고객
 where not (도시 like '%광역시' or 도시 like '%특별시')
 order by 마일리지 desc

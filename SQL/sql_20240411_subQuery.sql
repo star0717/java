@@ -52,11 +52,11 @@ where exists (select * from 주문
 				where 고객.고객번호 = 주문.고객번호)
 				
 -- 한번이라도 주문한 적이 있는 고객의 정보(in)
-/*select 고객.고객번호,고객회사명
+select 고객.고객번호,고객회사명
 from 고객
 where 고객번호 in (select 고객번호 from 주문
 			where 고객.고객번호 = 주문.고객번호)
-order by 고객번호;*/
+order by 고객번호;
 
 -- 한번이라도 주문한 적이 있는 고객의 정보(in)02
 select 고객.고객번호,고객회사명
